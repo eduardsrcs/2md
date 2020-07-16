@@ -1,0 +1,97 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body{
+	min-width: 300px;
+	font-family: Verdana, Tahoma, sans-serif;
+}
+
+h1, h2, nav, .mybtns, #time{
+	text-align: center;
+}
+
+header {
+	min-height: 10vh;
+}
+
+nav>ul{
+	/*display: flex;
+	align-items: center;*/
+	margin: 0 auto;
+	background-color: #7a7;
+}
+
+nav>ul>li {
+	display: inline-block;
+	width: 100px;
+	height: 24px;
+	line-height: 24px;
+	transition: .2s;
+}
+
+nav>ul>li:hover{
+	color: #eee;
+	cursor: pointer;
+	background-color: #8b8;
+}
+
+main{
+	margin-top: 20px;
+	position: relative;
+	top: 0;
+	left: 0;
+	min-height: 60vh;
+}
+
+main::after{
+	clear: both;
+}
+
+main h2{
+	margin: 20px auto;
+}
+
+main>aside, main>article{
+	text-align: justify;
+	padding: 0 5px;
+}
+
+main>article{
+	position: absolute;
+	top: 0;
+	width: 50%;
+	margin: 0 25%;
+}
+
+main>aside{
+	width: 25%;
+}
+
+main.aside::after{
+	clear: both;
+}
+main>aside.left{
+	float: left;
+}
+main>aside.right{
+	float: right;
+}
+
+#time{
+	font-size: 30px;
+	color: blue;
+}
+
+@media screen and (max-width: 600px) {
+	main>aside, main>article {
+		position: static;
+		width: 100%;
+	}
+
+	main>article {
+		margin: 0;
+	}
+}
